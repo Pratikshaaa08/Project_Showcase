@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ProjectShowcast | Pastel Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --mint: #C8E7D8;
+      --peach: #FFE5B4;
+      --lavender: #EBD9FC;
+      --cream: #FFF8F0;
+      --text-dark: #2E2E2E;
+      --accent: #A782EC;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background: linear-gradient(to bottom right, var(--mint), var(--cream), var(--lavender));
+      color: var(--text-dark);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--text-dark);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      color: var(--text-dark);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+      margin-top: 20px;
+      color: var(--text-dark);
+    }
+
+    .filters {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 10px 20px;
+      border: 2px solid var(--accent);
+      border-radius: 25px;
+      background: white;
+      color: var(--text-dark);
+      cursor: pointer;
+      font-weight: 500;
+      transition: 0.3s ease-in-out;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--accent);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="container header-content">
+    <div class="logo">
+      <i class="fas fa-heart"></i> Project Portfolio
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <h1>Project Showcase</h1>
+    <p>A showcase of my technical projects highlighting creative solutions and thoughtful design.</p>
+    <div class="filters">
+      <button class="filter-btn active">All Projects</button>
+      <button class="filter-btn">Web Development </button>
+      <button class="filter-btn">Mobile App</button>
+      <button class="filter-btn">UI/UX Design</button>
+    </div>
+  </div>
+</section>
+<!-- Project Section -->
+<section class="projects container" style="padding: 50px 0;">
+  <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 30px; color: #444;">My Projects</h2>
+  <div class="project-grid" style="display: grid; gap: 30px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+
+    <!-- Student Record System -->
+    <div class="project-card" style="background-color: #ffe6e6; padding: 20px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+      <h3 style="color: #d14747;">Student Record System</h3>
+      <p>Console-based Python app for managing student records using linked list, stack, and queue.</p>
+      <p><strong>Tech:</strong> Python, Data Structures</p>
+      <p><strong>Type:</strong> Desktop App</p>
+    </div>
+
+    <!-- Mini Voice Assistant -->
+    <div class="project-card" style="background-color: #e0f7fa; padding: 20px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+      <h3 style="color: #0097a7;">Mini Voice Assistant</h3>
+      <p>A voice-controlled Python assistant built during internship under PELRC.</p>
+      <p><strong>Tech:</strong> Python, SpeechRecognition</p>
+      <p><strong>Type:</strong> AI Project</p>
+    </div>
+
+    <!-- Mood Tracer -->
+    <div class="project-card" style="background-color: #f3e5f5; padding: 20px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+      <h3 style="color: #8e24aa;">Mood Tracer</h3>
+      <p>Track daily moods and emotions. Visual summary with clean UI.</p>
+      <p><strong>Tech:</strong> HTML, CSS, JS</p>
+      <p><strong>Type:</strong> Web App</p>
+    </div>
+
+    <!-- Hostel Management System -->
+    <div class="project-card" style="background-color: #fff9c4; padding: 20px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+      <h3 style="color: #fbc02d;">Hostel Management System</h3>
+      <p>SQL and MongoDB-based hostel record manager with registration features.</p>
+      <p><strong>Tech:</strong> MySQL, MongoDB</p>
+      <p><strong>Type:</strong> Database App</p>
+    </div>
+
+    <!-- Weather Forecast -->
+    <div class="project-card" style="background-color: #dcedc8; padding: 20px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+      <h3 style="color: #558b2f;">Weather Forecast</h3>
+      <p>Real-time weather app showing temperature, humidity, and forecast by city.</p>
+      <p><strong>Tech:</strong> HTML, JS, API</p>
+      <p><strong>Type:</strong> Web App</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Get In Touch Section -->
+<section class="contact container" style="padding: 60px 0; text-align: center;">
+  <h2 style="font-size: 2.5rem; color: #444;">Get in Touch</h2>
+  <p style="font-size: 1.1rem; margin-top: 10px;">Have a question or want to connect?</p>
+  <p style="font-size: 1.2rem; margin-top: 20px;">
+    📧 <strong>Email me at:</strong><br>
+    <a href="mailto:pratikshapatil1640@gmail.com" style="color: #6c63ff; text-decoration: none;">pratikshapatil1640@gmail.com</a>
+  </p>
+</section>
